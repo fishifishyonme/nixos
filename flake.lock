@@ -7,17 +7,40 @@
         ]
       },
       "locked": {
-        "lastModified": 1768920986,
-        "narHash": "sha256-CNzzBsRhq7gg4BMBuTDObiWDH/rFYHEuDRVOwCcwXw4=",
-        "owner": "nix-community",
-        "repo": "disko",
-        "rev": "de5708739256238fb912c62f03988815db89ec9a",
+        "lastModified": 1785620179,
+        "narHash": "sha256-MWck4ibmKxC4RGS0bnzUlcbgrtgGhdUOis5Kfqg9NvE=",
+        "path": "/home/fish/Documents/projects/disko",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/fish/Documents/projects/disko",
+        "type": "path"
+      }
+    },
+    "finix": {
+      "locked": {
+        "lastModified": 1785975151,
+        "narHash": "sha256-l9Cascohs+MK6m3YSOOvbMvYgUDxiUhYjd6qE2i/J3I=",
+        "path": "/home/fish/Documents/projects/finix",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/fish/Documents/projects/finix",
+        "type": "path"
+      }
+    },
+    "finix-modules": {
+      "locked": {
+        "lastModified": 1784125385,
+        "narHash": "sha256-McTnmfCE/IkPZDLWewezlg4w7k5fEK5caq2clxLs6+c=",
+        "owner": "finix-community",
+        "repo": "community-modules",
+        "rev": "9dfe8ae9df007c441abbe3184e531e70dffa05b0",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "ref": "latest",
-        "repo": "disko",
+        "owner": "finix-community",
+        "repo": "community-modules",
         "type": "github"
       }
     },
@@ -141,11 +164,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1784497964,
-        "narHash": "sha256-vlHUuqAcbcH2RKmHbPiuQzbv1pnzzavXnI62RD0bqCU=",
+        "lastModified": 1784796856,
+        "narHash": "sha256-wWFrV5/Qbm+lyt5x20E/bSbfJiGKMo4RCxZV8cl/WZI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "241313f4e8e508cb9b13278c2b0fa25b9ca27163",
+        "rev": "e2587caef70cea85dd97d7daab492899902dbf5d",
         "type": "github"
       },
       "original": {
@@ -241,6 +264,8 @@
     "root": {
       "inputs": {
         "disko": "disko",
+        "finix": "finix",
+        "finix-modules": "finix-modules",
         "flake-parts": "flake-parts",
         "impermanence": "impermanence",
         "import-tree": "import-tree",
@@ -260,11 +285,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1784358075,
-        "narHash": "sha256-ROQKfsb3h3Z21qSoTdFI0NoDw1kCy5lMO3OBUbVlZVw=",
+        "lastModified": 1784645299,
+        "narHash": "sha256-6K4RW0XLKl1WOl5h+r53FFsrWklY4doHONDDmEt4SFQ=",
         "owner": "Ryokune",
         "repo": "substratum",
-        "rev": "5573ca208ffbad90652aef75ebba60e10ba2f528",
+        "rev": "ab3d50ba9563d7ed0475b4b8cf1ccc7ca0fc1e1e",
         "type": "github"
       },
       "original": {
