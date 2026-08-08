@@ -1,0 +1,3 @@
+{ ... }: {
+  programs.sudo.enable = true;
+}

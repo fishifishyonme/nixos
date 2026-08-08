@@ -1,0 +1,5 @@
+{ ... }: {
+  services.polkit = {
+    enable = true;
+  };
+}
