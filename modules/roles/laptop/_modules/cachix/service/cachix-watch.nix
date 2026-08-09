@@ -14,6 +14,7 @@
     wants = [ "network-online.target" ];
     after = [ "network-online.target" ];
     wantedBy = [ "multi-user.target" ];
+    enable = false;
 
     serviceConfig = {
       KillMode = "process";
