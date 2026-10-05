@@ -37,6 +37,7 @@
               (pkgs.writeShellScript "waydroid-gpu-fix-pre" ''
                 set -e
                 PROP_FILE="/var/lib/waydroid/waydroid_base.prop"
+                LXC_FILE="/var/lib/waydroid/lxc/waydroid/config"
 
                 mkdir -p /var/lib/waydroid
                 touch "$PROP_FILE"
@@ -49,10 +50,17 @@
                   echo "$1=$2" >> "$PROP_FILE"
                 }
 
+                set_lxc() {
+                  ${pkgs.gnused}/bin/sed -i "/^$1 = /d" "$LXC_FILE"
+                  echo "$1 = $2" >> "$LXC_FILE"
+                }
+
                 # Force Intel GPU (GBM/Mesa)
                 set_prop ro.hardware.gralloc minigbm_gbm_mesa
                 set_prop ro.hardware.egl mesa
                 set_prop ro.hardware.vulkan intel
+
+                set_lxc lxc.net.0.mtu 1358
 
                 # Clean empty lines
                 # ${pkgs.gnused}/bin/sed -i '/^$/d' "$PROP_FILE"
