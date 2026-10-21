@@ -7,8 +7,17 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
+    # nix-cachyos-kernel = {
+    #   flake = true;
+    #   type = "github";
+    #   owner = "xddxdd";
+    #   repo = "nix-cachyos-kernel";
+    #   ref = "release";
+    # };
+
     disko = {
-      url = "github:nix-community/disko/latest";
+      # url = "github:nix-community/disko/latest";
+      url = "path:/home/fish/Documents/projects/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence = {
@@ -28,6 +37,10 @@
       url = "github:Ryokune/substratum";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # finix.url = "github:finix-community/finix";
+    finix.url = "path:/home/fish/Documents/projects/finix";
+    finix-modules.url = "github:finix-community/community-modules";
   };
 
   outputs =
@@ -43,6 +56,7 @@
       imports = [
         (inputs.import-tree ./modules)
         inputs.disko.flakeModules.default
+
       ];
       debug = true;
     };
