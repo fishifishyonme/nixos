@@ -1,7 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, self, ... }:
 {
   imports = [
-    inputs.preservation.nixosModules.default
+    self.inputs.preservation.nixosModules.default
   ];
   boot.initrd.systemd = {
     services.impermance-btrfs-root = {
