@@ -1,8 +1,8 @@
-{ self, inputs, ... }:
+{ self, ... }:
 
 {
   imports = [
-    inputs.disko.nixosModules.disko
+    self.inputs.disko.nixosModules.disko
   ];
   disko.devices.disk.main = {
     device = "/dev/disk/by-id/ata-CT1000MX500SSD1_2132E5BE3ADF";
